@@ -1,0 +1,224 @@
+body{
+    background: #cb3737;
+    overflow: hidden;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 12vw;
+    font-weight: 100;
+    position: absolute;
+    top: 10%;
+    left: 25.5%;
+    z-index: 2;
+    }
+
+h2{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 2vw;
+    width: 30%;
+    text-align: center;
+    font-weight: 100;
+    position: absolute;
+    top: 52%;
+    left: 32.7%;
+    z-index: 2;
+    line-height: 1.2em;
+    border: 1px solid #fff;
+    padding: 30px 25px;
+    
+}
+
+
+#atomic{
+    position: absolute;
+    top: -52em;
+    left: -49em;
+    
+    
+}
+
+.electron {
+  position: absolute;
+  left: 500px;
+  top: 0;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #C73535;
+  
+}
+
+.electron_two {
+  position: absolute;
+  left: 1195px;
+  top: 1625px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #C73535;
+  
+}
+
+.electron_three {
+  position: absolute;
+  left: 1245px;
+  top: 500px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #C73535;
+  z-index:2;
+}
+
+.electron_four {
+  position: absolute;
+  left: 320px;
+  top: 1000px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #C73535;
+  z-index:2;
+}
+
+.orbit {
+  position: relative;
+  display: inline-block;
+  width: 1750px;
+  height: 1750px;
+  border-radius: 50%;
+  border: 10px solid #C73535;
+  transition: border-color .7s;
+  z-index:1;
+    animation: spin 15s linear infinite;
+ }
+
+.orbit_two{
+  position: absolute;
+  display: inline-block;
+  width: 1050px;
+  height: 1050px;
+  left: 350px;
+  top: 350px;
+  border-radius: 50%;
+  border: 10px solid #C73535;
+  transition: border-color .7s;
+  z-index: 0;
+  animation: spin 15s linear infinite;
+}
+
+.core {
+  margin-top: 675px;
+  margin-left: 675px;
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  background-color: #C73535;
+  border-radius: 50%;
+  transition: margin-left .8s;
+}
+
+
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(-360deg); }
+    to { -moz-transform: rotate(0deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(-360deg); }
+    to { -webkit-transform: rotate(0deg); }
+}
+
+.orbit{
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 15000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 15000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 15000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
+
+#symbol{
+    
+    border: 2px solid #fff;
+    display: inline-block;
+    margin: 2em;
+    z-index: 3;
+}
+
+#symbol {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+#symbol:before {
+  content: '';
+  position: absolute;
+  border: #fff solid 2px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+#symbol:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+  -webkit-animation-name: hvr-ripple-out;
+  animation-name: hvr-ripple-out;
+}
+
+#symbol h3{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    display: inline;
+}
+
+#symbol_one{
+    padding: 0.4em 0.4em 0.4em 0.6em;
+    font-size: 2em;
+}
+
+#symbol_two{
+    padding: 0.5em 0.27em 0.5em 0.31em;
+    font-size: 1.8em;    
+}
+
+#symbol_three{
+    padding: 0.5em 0.47em 0.5em 0.61em;
+    font-size: 1.8em;    
+}
+
+#symbol_four{
+    padding: 0.5em 0.27em 0.5em 0.31em;
+    font-size: 1.8em;    
+}
+
+#symbol_five{
+    padding: 0.4em 0.4em 0.4em 0.6em;
+    font-size: 2em;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 0.5em;
+    display: inline;
+    top: -1.5em;
+    position: relative;
+}

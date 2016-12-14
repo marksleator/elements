@@ -1,0 +1,978 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*------------------------------------------ RESET ---------------------------------------------------------*/
+
+
+section{
+    width: 100%;
+    height: 40em;
+    }
+
+h1{
+    font-family: Dense;
+    font-size: 5em;
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+h1 {
+  
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+h1:hover, h1:focus, h1:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  }
+
+
+
+
+/*---------------------------------------------------- ZERO -------------------------------------------------------*/
+
+#zero h1{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 12vw;
+    font-weight: 100;
+    position: absolute;
+    top: 10%;
+    left: 25.5%;
+    z-index: 2;
+    }
+
+#zero{
+    background-color: #CB3737;
+}
+
+/*---------------------------------------------------- ONE -------------------------------------------------------*/
+
+html{
+    overflow-x: hidden;
+}
+
+
+
+#one h1{
+    color: #01283c;
+    letter-spacing: 0.29em;
+    position: relative;
+    right: -0.17em;
+    z-index: 1;
+     
+}
+
+h2{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 2em;
+    display: inline;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 0.8em;
+    display: inline;
+    top: -2em;
+    position: relative;
+}
+
+#symbol{
+    padding: 0.8em 0.8em 0.8em 1em;
+    background-color: #d6bd30;
+    border: 2px solid #fff;
+    display: inline-block;
+    margin: 2em;
+}
+
+img{
+    display: block; 
+    margin: 0 auto;
+    position: relative;
+    top: -24.8em;
+}
+
+#one{
+    background: #d68630;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+@-webkit-keyframes hvr-ripple-out{
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+@keyframes hvr-ripple-out{
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+#symbol {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+#symbol:before {
+  content: '';
+  position: absolute;
+  border: #fff solid 2px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+#symbol:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+  -webkit-animation-name: hvr-ripple-out;
+  animation-name: hvr-ripple-out;
+}
+
+/*-----------------------------ANIMATION-----------------------------------*/
+
+#orbit_container{
+    width: 8%;
+    margin: 0 auto;
+    padding-top: 4em;
+}
+
+#one .electron {
+  position: absolute;
+  right: 70px;
+  top: 0px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #d6bd30;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+
+#one .orbit {
+  position: relative;
+  display: inline-block;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: 2px solid #d6bd30;
+  transition: border-color .7s;
+  
+}
+#one .core {
+  margin-top: 30px;
+  margin-left: 30px;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #d6bd30;
+  border-radius: 50%;
+  transition: margin-left .8s;
+}
+#one .orbit:hover {
+  border-color: #ccc;
+}
+#one .orbit:hover .core {
+  margin-left: 180px;
+}
+#one .orbit:hover .electron {
+  top: 140px;
+  width: 15px;
+  height: 15px;
+  background-color: #aa3444;
+}
+
+#one .orbit:hover .electron_two{
+    background-color: ;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+
+
+
+/*---------------------------------------------------- TWO -------------------------------------------------------*/
+
+
+#two{
+    background: #d6bd30;
+}
+
+#two h1{
+    color: #18526e;
+    letter-spacing: 0.56em;
+    position: relative;
+    right: -0.35em;
+    z-index: 1;
+}
+
+#two h2{ font-size: 2em;}
+
+#two #symbol{ 
+    padding: 1em 0.4em 1em 0.6em;
+    background-color: #90ba36;
+}
+
+/*-----------------------------ANIMATION-----------------------------------*/
+
+
+
+#two .electron {
+  position: absolute;
+  right: 70px;
+  top: 0px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #90ba36;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+#two .electron_two{
+  position: absolute;
+  left: 75px;
+  top: 75px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #90ba36;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+#two .orbit {
+  position: relative;
+  display: inline-block;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: 2px solid #90ba36;
+  transition: border-color .7s;
+  
+}
+#two .core {
+  margin-top: 30px;
+  margin-left: 30px;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #90ba36;
+  border-radius: 50%;
+  transition: margin-left .8s;
+}
+#two .orbit:hover {
+  border-color: #ccc;
+}
+#two .orbit:hover .core {
+  margin-left: 180px;
+}
+#two .orbit:hover .electron {
+  top: 140px;
+  width: 15px;
+  height: 15px;
+  background-color: #aa3444;
+}
+
+#two .orbit:hover .electron_two{
+    background-color: #d68630 ;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+
+/*---------------------------------------------------- THREE -------------------------------------------------------*/
+
+
+#three{
+    background: #90ba36;
+}
+
+#three h1{
+    color: #1c506a;
+    letter-spacing: 0.48em;
+    position: relative;
+    right: -0.36em;
+    z-index: 1;
+    margin-top: -2em;
+}
+
+#three #symbol{
+    background-color: #d9e8f5;
+    border: 2px solid #3e7f9f;
+}
+
+#three p, #three h2{
+    color: #3e7f9f;
+}
+
+
+
+/*-----------------------------ANIMATION-----------------------------------*/
+
+
+#three .electron {
+  position: absolute;
+  left: 70px;
+  top: 0;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #19a18c;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+#three .electron_deux {
+  position: absolute;
+  left: 25px;
+  top: 90px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #19a18c;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+#three .orbit {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #19a18c;
+  transition: border-color .7s;
+  
+  z-index:1;
+}
+
+#three .orbit_two {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #19a18c;
+  transition: border-color .7s;
+  
+  right: 3.05em;
+  top: -9.5em;
+}
+
+#three .electron_two {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #19a18c;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+#three .orbit_two:hover {
+  border-color: #ccc;
+}
+#three .orbit_two:hover .core {
+  margin-left: 180px;
+}
+#three .orbit_two:hover .electron {
+  top: 240px;
+  width: 30px;
+  height: 30px;
+  background-color: #aa3444;
+}
+
+#three .core {
+  margin-top: 30px;
+  margin-left: 30px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #19a18c;
+  border-radius: 50%;
+  transition: margin-left .8s;
+}
+#three .orbit:hover {
+  border-color: #ccc;
+}
+#three .orbit:hover .core {
+  margin-left: 180px;
+}
+
+#three .orbit:hover .electron {
+  top: 140px;
+  width: 30px;
+  height: 30px;
+  background-color: #aa3444;
+}
+
+#three .orbit:hover .electron_deux {
+  top: 200px;
+  width: 15px;
+  height: 15px;
+  background-color: #d68630;
+}
+
+#three .orbit_two:hover .electron_two {
+  top: 250px;
+  width: 15px;
+  height: 15px;
+  background-color: #aa3444;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+
+/*---------------------------------------------------- FOUR  -------------------------------------------------------*/
+
+
+#four{
+    background: #19a18c;
+}
+
+#four h1{
+    color: #d9e8f5;
+    letter-spacing: 0.28em;
+    position: relative;
+    right: -0.22em;
+    z-index: 1;
+    margin-top: -2em;
+}
+
+#four #symbol{
+    background-color: #91bed4;
+    border: 2px solid #18526e;
+    padding: 1em 0.4em 1em 0.8em;
+    
+}
+
+#four p, #four h2{
+    color: #18526e;
+}
+
+/*-----------------------------ANIMATION-----------------------------------*/
+
+
+#four .electron {
+  position: absolute;
+  left: 70px;
+  top: 0;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #205c79;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+#four .electron_deux {
+  position: absolute;
+  left: 25px;
+  top: 90px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #205c79;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+#four .orbit {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #205c79;
+  transition: border-color .7s;
+  
+  z-index:1;
+}
+
+#four .orbit_two {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #205c79;
+  transition: border-color .7s;
+  
+  right: 3.05em;
+  top: -9.5em;
+}
+
+#four .electron_two {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #205c79;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+#four .electron_two_deux {
+  position: absolute;
+  left: 150px;
+  top: 175px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #205c79;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+#four .orbit_two:hover {
+  border-color: #ccc;
+}
+#four .orbit_two:hover .core {
+  margin-left: 180px;
+}
+#four .orbit_two:hover .electron {
+  top: 240px;
+  width: 30px;
+  height: 30px;
+  background-color: #aa3444;
+}
+
+#four .core {
+  margin-top: 30px;
+  margin-left: 30px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #205c79;
+  border-radius: 50%;
+  transition: margin-left .8s;
+}
+#four .orbit:hover {
+  border-color: #ccc;
+}
+#four .orbit:hover .core {
+  margin-left: 180px;
+}
+
+#four .orbit:hover .electron {
+  top: 140px;
+  width: 30px;
+  height: 30px;
+  background-color: #aa3444;
+}
+
+#four .orbit:hover .electron_deux {
+  top: 200px;
+  width: 15px;
+  height: 15px;
+  background-color: #d68630;
+}
+
+#four .orbit_two:hover .electron_two {
+  top: 250px;
+  width: 15px;
+  height: 15px;
+  background-color: #aa3444;
+}
+
+#four .orbit_two:hover .electron_two_deux {
+  top: 160px;
+  width: 15px;
+  height: 15px;
+  background-color: #c819d3;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(-360deg); }
+    to { -moz-transform: rotate(0deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(-360deg); }
+    to { -webkit-transform: rotate(0deg); }
+}
+
+.orbit{
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 3000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 3000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 3000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
+
+.orbit_two{
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 3000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
+
+.orbit_three{
+    
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 3000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+}
+
+
+/*---------------------------------------------------- FIVE  -------------------------------------------------------*/
+
+
+#five{
+    background: #205c79;
+}
+
+#five h1{
+    color: #fff;
+    letter-spacing: 0.8em;
+    position: relative;
+    right: -0.44em;
+    z-index: 1;
+    margin-top: -5.5em;
+}
+
+#five h2{ font-size: 2em;}
+
+#five p, #five h2{
+    color: #01283b;
+}
+
+#five #symbol{ 
+    padding: 1em 1em 1em 1.2em;
+    background-color: #3e7f9f;
+    border: 2px solid #01283b;
+}
+
+/*-----------------------------ANIMATION-----------------------------------*/
+
+#five #orbit_container{
+    width: 8%;
+    margin: 0 auto;
+    padding-top: 7em;
+    
+}
+
+
+#five .electron {
+  position: absolute;
+  left: 70px;
+  top: 0;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #01283b;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+#five .electron_deux {
+  position: absolute;
+  left: 25px;
+  top: 90px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #01283b;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+#five .orbit {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #01283b;
+  transition: border-color .7s;
+  
+  z-index:2;
+}
+
+#five .orbit_two {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #01283b;
+  transition: border-color .7s;
+  
+  right: 3.05em;
+  top: -9.5em;
+  z-index: 1;
+}
+
+#five .electron_two {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #01283b;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+#five .electron_two_deux {
+  position: absolute;
+  left: 150px;
+  top: 175px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #01283b;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+#five .orbit_two:hover {
+  border-color: #ccc;
+}
+#five .orbit_two:hover .core {
+  margin-left: 180px;
+}
+#five .orbit_two:hover .electron {
+  top: 240px;
+  width: 30px;
+  height: 30px;
+  background-color: #aa3444;
+}
+
+#five .core {
+  margin-top: 30px;
+  margin-left: 30px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #01283b;
+  border-radius: 50%;
+  transition: margin-left .8s;
+}
+#five .orbit:hover {
+  border-color: #ccc;
+}
+#five .orbit:hover .core {
+  margin-left: 180px;
+}
+
+#five .orbit:hover .electron {
+  top: 140px;
+  width: 30px;
+  height: 30px;
+  background-color: #aa3444;
+}
+
+#five .orbit:hover .electron_deux {
+  top: 200px;
+  width: 15px;
+  height: 15px;
+  background-color: #d68630;
+}
+
+#five .orbit_two:hover .electron_two {
+  top: 250px;
+  width: 15px;
+  height: 15px;
+  background-color: #aa3444;
+}
+
+#five .orbit_two:hover .electron_two_deux {
+  top: 160px;
+  width: 15px;
+  height: 15px;
+  background-color: #c819d3;
+}
+
+#five .orbit_three {
+  position: relative;
+  display: inline-block;
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 2px solid #01283b;
+  transition: border-color .7s;
+  animation: spin 3s linear infinite;
+  left: -6.4em;
+  top: -25.7em;
+  z-index: 0;
+}
+
+#five .electron_three {
+  position: absolute;
+  left: 220px;
+  top: 10px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #01283b;
+  transition: top 1s ease-out, width .4s, height .4s, background-color .8s;
+}
+
+#five .orbit_three:hover .electron_three {
+  top: 340px;
+  width: 15px;
+  height: 15px;
+  background-color: #aa3444;
+}
+
+#five .orbit_three:hover {
+  border-color: #ccc;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+body{
+    background-color: #01283b;
+}
+
+footer{
+    width: 100%;
+    
+}
+
+footer h3{
+    font-family: 'Raleway', sans-serif;
+    color: #d68630;
+    font-size: 3.5em;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 2em;
+}
