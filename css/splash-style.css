@@ -6,12 +6,14 @@ body{
 h1{
     font-family: 'Raleway', sans-serif;
     color: #fff;
-    font-size: 12vw;
+    font-size: 18vw;
     font-weight: 100;
-    position: absolute;
-    top: 10%;
-    left: 25.5%;
+    position: relative;
+    top: 5vw;
+    left: 12.5%;
     z-index: 2;
+    margin: 0 auto;
+    padding-bottom: 6vw
     }
 
 h2{
@@ -21,19 +23,27 @@ h2{
     width: 30%;
     text-align: center;
     font-weight: 100;
-    position: absolute;
-    top: 52%;
-    left: 32.7%;
-    z-index: 2;
-    line-height: 1.2em;
+    position: relative;
+    top: 4vw;
+    margin: 0 auto;
+    /* left: 32.3vw; */
+    z-index: 130;
+    /* line-height: 1.2em; */
     border: 1px solid #fff;
-    padding: 30px 25px;
+    padding: 2vw;
     
 }
 
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    
+}
 
 #atomic{
-    position: absolute;
+    position: fixed;
     top: -52em;
     left: -49em;
     
@@ -151,68 +161,105 @@ h2{
     -ms-animation-timing-function: linear;
 }
 
-#symbol{
-    
-    border: 2px solid #fff;
+.symbol:hover{
+    zoom: 1;
+	filter: alpha(opacity=90);
+	opacity: 0.9;
+}
+
+.symbol{
     display: inline-block;
-    margin: 2em;
+    margin: 2.6vw;
     z-index: 3;
 }
 
-#symbol {
+.symbol {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
-  position: relative;
+  
 }
-#symbol:before {
+.symbol:before {
   content: '';
   position: absolute;
-  border: #fff solid 2px;
+  border: #fff solid 3px;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
-#symbol:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+.symbol:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
   -webkit-animation-name: hvr-ripple-out;
   animation-name: hvr-ripple-out;
 }
 
-#symbol h3{
+@-webkit-keyframes hvr-ripple-out{
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+@keyframes hvr-ripple-out{
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+
+.symbol h3{
     font-family: 'Raleway', sans-serif;
     color: #fff;
     display: inline;
 }
 
 #symbol_one{
-    padding: 0.4em 0.4em 0.4em 0.6em;
-    font-size: 2em;
+    padding: 1.6vw 2.0vw 1.6vw 2.3vw;
+    font-size: 3vw;
+    background-color:#d68630 ;
+    border: 2px solid #fff;
 }
 
 #symbol_two{
-    padding: 0.5em 0.27em 0.5em 0.31em;
-    font-size: 1.8em;    
+    padding: 1.6vw 1vw 1.6vw 1.2vw;
+    font-size: 3vw;   
+    background-color:#d6bd30 ;
+    border: 2px solid #fff;
 }
+
 
 #symbol_three{
-    padding: 0.5em 0.47em 0.5em 0.61em;
-    font-size: 1.8em;    
-}
+    padding: 1.6vw 2.0vw 1.6vw 2.3vw;
+    font-size: 3vw;  
+    background-color:#90ba36 ;
+    
+    }
+
 
 #symbol_four{
-    padding: 0.5em 0.27em 0.5em 0.31em;
-    font-size: 1.8em;    
+   padding: 1.6vw 1vw 1.6vw 1.5vw;
+    font-size: 3vw;  
+    background-color:#91bed4 ;
 }
 
+
 #symbol_five{
-    padding: 0.4em 0.4em 0.4em 0.6em;
-    font-size: 2em;
+    padding: 1.6vw 2.0vw 1.6vw 2.3vw;
+    font-size: 3vw;
+    background-color: #18526e;
 }
+
+
+
 
 p{
     font-family: 'Raleway', sans-serif;
@@ -222,3 +269,29 @@ p{
     top: -1.5em;
     position: relative;
 }
+
+#container{
+    position: relative;
+    margin: 0 auto;
+    width: 70vw;
+    left: 1vw;
+    top: 11vw;
+}
+
+
+
+h1 {
+  
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+h1:hover, h1:focus, h1:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  }

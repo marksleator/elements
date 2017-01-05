@@ -13,11 +13,14 @@
     <style> 
 @font-face {
    font-family: Dense;
-   src: url(fonts/Dense.otf)
+   src: url(fonts/Dense.otf),
+        url(fonts/dense-webfont.woff2) format('woff2'),
+        url(fonts/dense-webfont.woff) format('woff');
 }
 
 
 </style>
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -119,5 +122,25 @@
     
   </section>
 </main>
+    <!-- 
+      This is the base buggyfill. 
+-->
+<script src="viewport-units-buggyfill.js"></script>
+
+<!--
+      This is the hacks plugin needed for contentHacks to work correctly 
+      (see below).
+-->
+<script src="viewport-units-buggyfill.hacks.js"></script>
+<script>window.viewportUnitsBuggyfill.init({
+
+    // milliseconds to delay between updates of viewport-units
+    // caused by orientationchange, pageshow, resize events
+    refreshDebounceWait: 250,
+
+    // provide hacks plugin to make the contentHack property work correctly.
+    hacks: window.viewportUnitsBuggyfillHacks
+
+});</script>
 </body>
 </html>

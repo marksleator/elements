@@ -86,16 +86,17 @@ h1:hover, h1:focus, h1:active {
 #zero h1{
     font-family: 'Raleway', sans-serif;
     color: #fff;
-    font-size: 12vw;
+    font-size: 18vw;
     font-weight: 100;
     position: absolute;
-    top: 10%;
-    left: 25.5%;
+    top: 2%;
+    left: 13.5%;
     z-index: 2;
     }
 
 #zero{
     background-color: #CB3737;
+    height: 45vw;
 }
 
 /*---------------------------------------------------- ONE -------------------------------------------------------*/

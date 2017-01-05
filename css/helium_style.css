@@ -100,11 +100,11 @@ h2,small {
 .col-1,
 .col-2
 {
-  display: flex;
+  
   display: -webkit-flex;
   display: -moz-flex;
-  display: -ms-flexbox;
-  
+  /*-display: -ms-flexbox;
+  display: flex;-*/
      -webkit-flex: 1 1;
     /*-flex: 1 100%;-*/
     
@@ -290,12 +290,12 @@ p{
 nav a{
     font-family: 'Raleway', sans-serif;
     color: #01283c;
-    font-size: 1.3em;
+    font-size: 1.2em;
     text-decoration:none;
     float: left;
     display: inline-block;
     margin: 0em 4.5% 0em 3%;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* Underline From Center */
@@ -407,6 +407,15 @@ nav img{
 @-webkit-keyframes spin {
     from { -webkit-transform: rotate(-360deg); }
     to { -webkit-transform: rotate(0deg); }
+}
+
+@-o-keyframes spin {
+    0% { -o-transform: rotate(0deg);}
+  100% { -o-transform: rotate(360deg);}
+}
+@-ms-keyframes spin {
+    0% { -ms-transform: rotate(0deg);}
+  100% { -ms-transform: rotate(360deg);}
 }
 
 .orbit:hover{
